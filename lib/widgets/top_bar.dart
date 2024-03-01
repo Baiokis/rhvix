@@ -36,7 +36,7 @@ class HeaderRow extends StatelessWidget {
           child: Row(
             children: [
               Text('Ola ',
-                  style: TextStyle(fontSize: 14, color: Color(0xffFBFBFB))),
+                  style: TextStyle(fontSize: 18, color: Color(0xffFBFBFB))),
               Text(user + ',',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,

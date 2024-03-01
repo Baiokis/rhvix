@@ -14,42 +14,67 @@ class _PontoState extends State<Ponto> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(padding: EdgeInsets.symmetric(horizontal: 30, vertical: 25),
+    child:  Container(
+      width: MediaQuery.of(context).size.width * 0.85,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Column(
-                children: [
-                  Text(
-                    'Trabalhou nessa data:',
-                    style: TextStyle(
-                      color: Color(0xffFBFBFB),
-                      fontSize: 20,
+          Text(
+            'Trabalhou nessa data:',
+            style: TextStyle(
+              color: Color(0xffFBFBFB),
+              fontSize: 18,
+            ),
+          ),
+          SizedBox(height: 15),
+          Container(
+            width: MediaQuery.of(context).size.width * 0.60,
+            height: 50.0,
+            decoration: BoxDecoration(
+              border: Border.all(color: Color(0xffFBFBFB), width: 1.0),
+              borderRadius: BorderRadius.circular(5.0),
+            ),
+            child: DropdownButton<String>(
+              dropdownColor: Color(0xFF212121),
+              value: _selectedOption,
+              hint: Padding(
+                padding: EdgeInsets.only(left: 8.0),
+                child: Text(
+                  'Selecione uma opção',
+                  style: TextStyle(color: Color(0xffFBFBFB)),
+                ),
+              ),
+              onChanged: (String? newValue) {
+                setState(() {
+                  _selectedOption = newValue;
+                });
+              },
+              items: _options.map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      value,
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
-                  DropdownButton<String>(
-                    value: _selectedOption,
-                    hint: Text('Selecione uma opção'),
-                    onChanged: (String? newValue) {
-                      setState(() {
-                        _selectedOption = newValue;
-                      });
-                    },
-                    items: _options.map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                  ),
-                ],
+                );
+              }).toList(),
+              underline: Container(),
+              icon: Padding(
+                padding: EdgeInsets.only(right: 8.0),
+                child: Icon(
+                  Icons.arrow_drop_down,
+                  color: Colors.white,
+                ),
               ),
-            ],
-          ),
+            ),
+          )
         ],
       ),
+    )
     );
   }
 }

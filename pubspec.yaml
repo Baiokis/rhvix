@@ -26,6 +26,7 @@ flutter:
     - images/logo.svg
     - images/notify.svg
     - images/point.svg
+    - images/calendar.svg
     - images/man.svg
     - images/woman.svg
     - images/notify_present.svg

@@ -4,10 +4,10 @@ import 'screens/home.dart';
 import 'screens/ponto.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(RhVix());
 }
 
-class MyApp extends StatelessWidget {
+class RhVix extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/ponto',
+      initialRoute: '/login',
       routes: {
         '/': (context) => HomeScreen(),
         '/login': (context) => LoginScreen(),

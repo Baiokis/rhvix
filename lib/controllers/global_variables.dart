@@ -3,6 +3,7 @@ const String logo = 'images/logo.svg';
 const String man = 'images/man.svg';
 const String notify = 'images/notify.svg';
 const String notification = 'images/notify_present.svg';
+const String calendar = 'images/calendar.svg';
 const String woman = 'images/woman.svg';
 const user = "Gustavo Laube Schwartz";
 const int nao_preenchidos = 21;
