@@ -77,7 +77,7 @@ class _PontoState extends State<Ponto> {
             ),
             SimWidget(),
             // Descrição
-            SizedBox(height: 40),
+            SizedBox(height: 30),
             Text(
               'Descrição :',
               style: TextStyle(
@@ -115,7 +115,7 @@ class _PontoState extends State<Ponto> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.only(top: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

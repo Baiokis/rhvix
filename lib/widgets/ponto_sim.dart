@@ -1,4 +1,6 @@
 // ignore_for_file: type=lint
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class SimWidget extends StatefulWidget {
@@ -11,9 +13,12 @@ class SimWidget extends StatefulWidget {
 class _SimWidgetState extends State<SimWidget> {
   String? _selectedOption;
   final List<String> _options = ['Sim', 'Folga', 'Atestado'];
+  bool? _ischeckedsim = false;
+  bool? _ischeckednao = false;
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
         child: Column(
       children: [
@@ -276,7 +281,7 @@ class _SimWidgetState extends State<SimWidget> {
           ],
         ),
         // ROW de Tipos de Atendimentos
-        SizedBox(height: 15),
+        SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -405,6 +410,54 @@ class _SimWidgetState extends State<SimWidget> {
                 ))
           ],
         ),
+        Padding(padding: EdgeInsets.only(top: 35),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text(
+              'Houve desvio : ',
+              style: TextStyle(
+                color: Color(0xffFBFBFB),
+                fontSize: 15,
+              ),
+            ),
+            Text(
+              'Sim',
+              style: TextStyle(
+                color: Color(0xffFBFBFB),
+                fontSize: 15,
+              ),
+            ),
+            Checkbox(
+              activeColor: Color(0xffA7E4FE),
+              value: _ischeckedsim,
+              onChanged: (bool? newBool) {
+                setState(() {
+                  _ischeckedsim = newBool!;
+                  _ischeckednao = false;
+                });
+              },
+            ),
+            Text(
+              'Não',
+              style: TextStyle(
+                color: Color(0xffFBFBFB),
+                fontSize: 15,
+              ),
+            ),
+            Checkbox(
+              activeColor: Color(0xffA7E4FE),
+              value: _ischeckednao,
+              onChanged: (bool? newBool) {
+                setState(() {
+                  _ischeckednao = newBool!;
+                  _ischeckedsim = false;
+                });
+              },
+            )
+          ],
+        )
+        )
       ],
     ));
   }
