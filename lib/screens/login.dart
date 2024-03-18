@@ -74,20 +74,20 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 35.0),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.3,
-              child: ElevatedButton(
-                child: Text('Entrar',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                        color: Color(0xff212121))),
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
-                  );
-                },
-            style: ElevatedButton.styleFrom(
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.3,
+                child: ElevatedButton(
+                  child: Text('Entrar',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          color: Color(0xff212121))),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(7),
                     ),

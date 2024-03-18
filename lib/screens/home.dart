@@ -15,7 +15,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
-
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff212121),
@@ -84,48 +83,59 @@ class _HomeScreenState extends State<HomeScreen> {
               width: MediaQuery.of(context).size.width * 0.85,
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Color(0xffFBFBFB), // Define a cor da borda como #FBFBFB
+                  color:
+                      Color(0xffFBFBFB), // Define a cor da borda como #FBFBFB
                   width: 1, // Define a largura da borda como 1px
                 ),
-                borderRadius: BorderRadius.circular(7), // Adiciona bordas arredondadas de 7px
+                borderRadius: BorderRadius.circular(
+                    7), // Adiciona bordas arredondadas de 7px
               ),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal, // Permite rolagem horizontal
                 child: DataTable(
-                  columnSpacing: 38.0, // Espaçamento entre colunas, ajuste conforme necessário
+                  columnSpacing:
+                      38.0, // Espaçamento entre colunas, ajuste conforme necessário
                   columns: const <DataColumn>[
                     DataColumn(
                       label: Text(
                         'Data',
-                        style: TextStyle(fontStyle: FontStyle.italic, color: Colors.white),
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic, color: Colors.white),
                       ),
                     ),
                     DataColumn(
                       label: Text(
                         'HI',
-                        style: TextStyle(fontStyle: FontStyle.italic, color: Colors.white),
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic, color: Colors.white),
                       ),
                     ),
                     DataColumn(
                       label: Text(
                         'HF',
-                        style: TextStyle(fontStyle: FontStyle.italic, color: Colors.white),
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic, color: Colors.white),
                       ),
                     ),
                     DataColumn(
                       label: Text(
                         'CC',
-                        style: TextStyle(fontStyle: FontStyle.italic, color: Colors.white),
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic, color: Colors.white),
                       ),
                     ),
                   ],
                   rows: data.map<DataRow>((Map<String, dynamic> info) {
                     return DataRow(
                       cells: <DataCell>[
-                        DataCell(Text(info['Data'], style: const TextStyle(color: Colors.white))),
-                        DataCell(Text(info['HI'], style: const TextStyle(color: Colors.white))),
-                        DataCell(Text(info['HF'], style: const TextStyle(color: Colors.white))),
-                        DataCell(Text(info['CC'], style: const TextStyle(color: Colors.white))),
+                        DataCell(Text(info['Data'],
+                            style: const TextStyle(color: Colors.white))),
+                        DataCell(Text(info['HI'],
+                            style: const TextStyle(color: Colors.white))),
+                        DataCell(Text(info['HF'],
+                            style: const TextStyle(color: Colors.white))),
+                        DataCell(Text(info['CC'],
+                            style: const TextStyle(color: Colors.white))),
                       ],
                     );
                   }).toList(),
