@@ -1,6 +1,8 @@
 // ignore_for_file: type=lint
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:rhvix/screens/home.dart';
+import 'package:rhvix/screens/notify.dart';
 import '../controllers/global_variables.dart';
 
 class HeaderRow extends StatelessWidget {
@@ -17,17 +19,29 @@ class HeaderRow extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SvgPicture.asset(
-                logo,
-                color: Color(0xffFBFBFB),
-                width: MediaQuery.of(context).size.width * 0.3,
-                height: MediaQuery.of(context).size.height * 0.03,
+              GestureDetector(
+                onTap:(){
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => HomeScreen()));
+                },
+                child: SvgPicture.asset(
+                  logo,
+                  color: Color(0xffFBFBFB),
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  height: MediaQuery.of(context).size.height * 0.03,
+                ),
               ),
-              SvgPicture.asset(
-                notification,
-                width: MediaQuery.of(context).size.width * 0.3,
-                height: MediaQuery.of(context).size.height * 0.03,
-              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Notify()));
+                },
+                child: SvgPicture.asset(
+                  notification,
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  height: MediaQuery.of(context).size.height * 0.03,
+                ),
+              )
             ],
           ),
         ),

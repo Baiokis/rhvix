@@ -112,86 +112,79 @@ class _PontoScreenState extends State<PontoScreen> {
                                   child: SvgPicture.asset(work),
                                 )),
                           SizedBox(height: 20),
-                          Text(
-                            'Descrição :',
-                            style: TextStyle(
-                              color: Color(0xffFBFBFB),
-                              fontSize: 15,
-                            ),
-                          ),
-                          SizedBox(height: 15),
-                          Container(
-                            height: 150.0,
-                            child: TextField(
-                              controller: _messageController,
-                              keyboardType: TextInputType.multiline,
-                              maxLines: null,
-                              decoration: InputDecoration(
-                                hintText: 'Enviar mensagem',
-                                hintStyle: TextStyle(color: Colors.white),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0),
-                                  borderSide: BorderSide(
-                                      color: Color(0xffFBFBFB), width: 1.0),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0),
-                                  borderSide: BorderSide(
-                                      color: Color(0xffFBFBFB), width: 1.0),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5.0),
-                                  borderSide: BorderSide(
-                                      color: Color(0xffFBFBFB), width: 1.0),
-                                ),
+                          if (_selectedWidget != null) ...[
+                            Text(
+                              'Descrição :',
+                              style: TextStyle(
+                                color: Color(0xffFBFBFB),
+                                fontSize: 15,
                               ),
-                              style: TextStyle(color: Colors.white),
                             ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(top: 20),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.4,
-                                  child: ElevatedButton(
-                                    onPressed: () {
-                                      // Adicione sua lógica aqui
-                                    },
-                                    style: ElevatedButton.styleFrom(
-                                      foregroundColor: Colors.white,
-                                      backgroundColor: Color(0xFF212121),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(5.0),
-                                        side: BorderSide(
-                                            color: Color(0xFFF14040), width: 1.0),
-                                      ),
-                                    ),
-                                    child: Text('Cancelar'),
+                            SizedBox(height: 15),
+                            Container(
+                              height: 150.0,
+                              child: TextField(
+                                controller: _messageController,
+                                keyboardType: TextInputType.multiline,
+                                maxLines: null,
+                                decoration: InputDecoration(
+                                  hintText: 'Enviar mensagem',
+                                  hintStyle: TextStyle(color: Colors.white),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5.0),
+                                    borderSide: BorderSide(color: Color(0xffFBFBFB), width: 1.0),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5.0),
+                                    borderSide: BorderSide(color: Color(0xffFBFBFB), width: 1.0),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5.0),
+                                    borderSide: BorderSide(color: Color(0xffFBFBFB), width: 1.0),
                                   ),
                                 ),
-                                SizedBox(
-                                  width: MediaQuery.of(context).size.width * 0.4,
-                                  child: ElevatedButton(
-                                    onPressed: () {
-                                      // Adicione sua lógica aqui
-                                    },
-                                    style: ElevatedButton.styleFrom(
-                                      foregroundColor: Colors.white,
-                                      backgroundColor: Color(0xFF212121),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(5.0),
-                                        side: BorderSide(
-                                            color: Color(0xFFFBFBFB), width: 1.0),
-                                      ),
-                                    ),
-                                    child: Text('Cadastrar'),
-                                  ),
-                                ),
-                              ],
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
-                          )
+                            Padding(
+                              padding: EdgeInsets.only(top: 20),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SizedBox(
+                                    width: MediaQuery.of(context).size.width * 0.4,
+                                    child: ElevatedButton(
+                                      onPressed: () {},
+                                      style: ElevatedButton.styleFrom(
+                                        foregroundColor: Colors.white,
+                                        backgroundColor: Color(0xFF212121),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(5.0),
+                                          side: BorderSide(color: Color(0xFFF14040), width: 1.0),
+                                        ),
+                                      ),
+                                      child: Text('Cancelar'),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: MediaQuery.of(context).size.width * 0.4,
+                                    child: ElevatedButton(
+                                      onPressed: () {},
+                                      style: ElevatedButton.styleFrom(
+                                        foregroundColor: Colors.white,
+                                        backgroundColor: Color(0xFF212121),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(5.0),
+                                          side: BorderSide(color: Color(0xFFFBFBFB), width: 1.0),
+                                        ),
+                                      ),
+                                      child: Text('Cadastrar'),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
                         ],
                       ),
                     ),
