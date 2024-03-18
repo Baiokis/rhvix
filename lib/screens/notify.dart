@@ -18,10 +18,8 @@ class _NotifyState extends State<Notify> {
     'Atualize seus dados no sistema',
   ];
 
-  // Mantém o registro das mensagens lidas
   final Set<int> _lidas = {};
 
-  // Manipula o toque na mensagem
   void _handleTap(int index) {
     setState(() {
       _lidas.add(index);

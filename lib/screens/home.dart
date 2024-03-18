@@ -58,9 +58,8 @@ class _HomeScreenState extends State<HomeScreen> {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
-                        Color(0xffFBFBFB), // Define a cor de fundo do botão
+                        Color(0xffFBFBFB),
                     shape: RoundedRectangleBorder(
-                      // Cria bordas arredondadas
                       borderRadius: BorderRadius.circular(7),
                     ),
                   ),
@@ -84,17 +83,17 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 border: Border.all(
                   color:
-                      Color(0xffFBFBFB), // Define a cor da borda como #FBFBFB
-                  width: 1, // Define a largura da borda como 1px
+                      Color(0xffFBFBFB),
+                  width: 1,
                 ),
                 borderRadius: BorderRadius.circular(
-                    7), // Adiciona bordas arredondadas de 7px
+                    7),
               ),
               child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal, // Permite rolagem horizontal
+                scrollDirection: Axis.horizontal,
                 child: DataTable(
                   columnSpacing:
-                      38.0, // Espaçamento entre colunas, ajuste conforme necessário
+                      38.0,
                   columns: const <DataColumn>[
                     DataColumn(
                       label: Text(

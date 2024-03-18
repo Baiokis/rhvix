@@ -39,7 +39,7 @@ class _FolgaState extends State<FolgaWidget> {
               height: 40.0,
               width: MediaQuery.of(context).size.width * 0.85,
               padding: EdgeInsets.symmetric(
-                  horizontal: 8.0), // Adiciona padding horizontal
+                  horizontal: 8.0),
               decoration: BoxDecoration(
                 border: Border.all(color: Color(0xffFBFBFB), width: 1.0),
                 borderRadius: BorderRadius.circular(5.0),
@@ -49,14 +49,13 @@ class _FolgaState extends State<FolgaWidget> {
                   dropdownColor: Color(0xFF212121),
                   value: _selectedOption,
                   icon: Padding(
-                    // Move o ícone para a esquerda
                     padding: EdgeInsets.only(left: 8.0),
                     child: Icon(Icons.arrow_drop_down, color: Colors.white),
                   ),
                   iconSize:
-                      24, // Pode ajustar o tamanho do ícone conforme necessário
+                      24,
                   isExpanded:
-                      true, // Expande o dropdown para preencher o container
+                      true,
                   hint: Text(
                     'Selecione uma opção',
                     style: TextStyle(color: Color(0xffFBFBFB), fontSize: 10),
@@ -77,7 +76,7 @@ class _FolgaState extends State<FolgaWidget> {
                   }).toList(),
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 16), // Ajusta o estilo do texto
+                      fontSize: 16),
                 ),
               ),
             ),

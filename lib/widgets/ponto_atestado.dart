@@ -44,11 +44,11 @@ class _AtestadoState extends State<Atestado> {
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Color(0xFF212121), // Cor do fundo
+                backgroundColor: Color(0xFF212121),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0),
                   side: BorderSide(
-                      color: Color(0xFFFBFBFB), width: 1.0), // Borda branca
+                      color: Color(0xFFFBFBFB), width: 1.0),
                 ),
               ),
               child: Text('Importar Arquivo',

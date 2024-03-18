@@ -39,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                     prefixIcon: Icon(Icons.email),
                     contentPadding: EdgeInsets.symmetric(
                         vertical:
-                            10.0), // Adjust padding to center the text vertically
+                            10.0),
                     enabledBorder: OutlineInputBorder(
                       borderSide:
                           BorderSide(color: Color(0xffFBFBFB), width: 1.0),
