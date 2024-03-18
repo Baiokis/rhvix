@@ -5,6 +5,7 @@ const String notify = 'images/notify.svg';
 const String notification = 'images/notify_present.svg';
 const String calendar = 'images/calendar.svg';
 const String woman = 'images/woman.svg';
+const String work = 'images/work.svg';
 const user = "Gustavo Laube Schwartz";
 const int nao_preenchidos = 21;
 

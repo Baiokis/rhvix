@@ -30,6 +30,7 @@ flutter:
     - images/point.svg
     - images/calendar.svg
     - images/man.svg
+    - images/work.svg
     - images/woman.svg
     - images/notify_present.svg
 

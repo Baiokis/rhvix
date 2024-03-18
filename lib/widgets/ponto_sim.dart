@@ -10,7 +10,7 @@ class SimWidget extends StatefulWidget {
 
 class _SimWidgetState extends State<SimWidget> {
   String? _selectedOption;
-  final List<String> _options = ['Sim', 'Folga', 'Atestado'];
+  final List<String> _options = ['7:00', '17:00', '21:00'];
   bool? _ischeckedsim = false;
   bool? _ischeckednao = false;
 
